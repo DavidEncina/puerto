@@ -5,29 +5,42 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Velero
+public class Velero extends Barco
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // Almacena el numero de mastiles del velero
+    private int numeroMastiles;
 
     /**
      * Constructor for objects of class Velero
      */
     public Velero()
     {
-        // initialise instance variables
-        x = 0;
+    }
+    
+    /**
+     * Constructor for objects of class Velero
+     */
+    public Velero(String matricula, float eslora, int anoFabricacion, int numeroMastiles)
+    {
+        super(matricula, eslora, anoFabricacion);
+        this.numeroMastiles = numeroMastiles;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Devuelve el numero de mastiles del velero
+     * @return
      */
-    public int sampleMethod(int y)
+    public int getNumeroMastiles()
     {
-        // put your code here
-        return x + y;
+        return numeroMastiles;
+    }
+    
+    /**
+     * Devuelve las caracteristicas del velero
+     */
+    public String toString()
+    {
+        super.toString();
+        return "\nNumero de mastiles: " + numeroMastiles;
     }
 }
