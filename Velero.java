@@ -9,13 +9,6 @@ public class Velero extends Barco
 {
     // Almacena el numero de mastiles del velero
     private int numeroMastiles;
-
-    /**
-     * Constructor for objects of class Velero
-     */
-    public Velero()
-    {
-    }
     
     /**
      * Constructor for objects of class Velero
@@ -31,6 +24,15 @@ public class Velero extends Barco
      * @return
      */
     public int getNumeroMastiles()
+    {
+        return numeroMastiles;
+    }
+    
+    /**
+     * Coeficiente necesario para calcular el alquiler de los amarres
+     */
+    @Override
+    public int getCoeficienteBernua()
     {
         return numeroMastiles;
     }

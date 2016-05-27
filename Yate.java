@@ -8,31 +8,33 @@
 public class Yate extends EmbarcacionAMotor
 {
     // Almacena el numero de camarotes del yate
-    private int numeroCamarotes;
-
-    /**
-     * Constructor for objects of class Yate
-     */
-    public Yate()
-    {
-    }
+    private int camarotes;
     
     /**
      * Constructor for objects of class Yate
      */
-    public Yate(String matricula, float eslora, int anoFabricacion, int potencia, int numeroCamarotes)
+    public Yate(String matricula, float eslora, int anoFabricacion, int potencia, int camarotes)
     {
         super(matricula, eslora, anoFabricacion, potencia);
-        this.numeroCamarotes = numeroCamarotes;
+        this.camarotes = camarotes;
     }
 
     /**
      * Devuelve el numero de camarotes del yate
      * @return
      */
-    public int sampleMethod(int y)
+    public int getCamarotes()
     {
-        return numeroCamarotes;
+        return camarotes;
+    }
+    
+    /**
+     * Coeficiente necesario para calcular el alquiler de los amarres
+     */
+    @Override
+    public int getCoeficienteBernua()
+    {
+        return getPotencia() + numeroCamarotes;
     }
     
     /**
@@ -43,6 +45,6 @@ public class Yate extends EmbarcacionAMotor
     public String toString()
     {
         super.toString();
-        return "\nNumero de camarotes: " + numeroCamarotes;
-    }
+        return "\nNumero de camarotes: " + camarotes;
+    }   
 }

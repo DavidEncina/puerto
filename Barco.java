@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Barco
+public abstract class Barco
 {
     // Almacena la matriculacula del barco
     private String matricula;
@@ -13,13 +13,6 @@ public class Barco
     private float eslora;
     // Almacena el año fabricacion del barco
     private int anoFabricacion;    
-
-    /**
-     * Constructor for objects of class Barco
-     */
-    public Barco()
-    {
-    }
     
     /**
      * Constructor for objects of class Barco
@@ -57,6 +50,11 @@ public class Barco
     {
         return anoFabricacion;
     }
+    
+    /**
+     * Coeficiente necesario para calcular el alquiler de los amarres
+     */
+    public abstract int getCoeficienteBernua();
     
     /**
      * Devuelve las caracteristicas del barco

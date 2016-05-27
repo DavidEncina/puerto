@@ -1,19 +1,19 @@
 
 /**
- * Write a description of class AlquilerAmarres here.
+ * Write a description of class Alquiler here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class AlquilerAmarres
+public class Alquiler
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class AlquilerAmarres
+     * Constructor for objects of class Alquiler
      */
-    public AlquilerAmarres()
+    public Alquiler()
     {
         // initialise instance variables
         x = 0;

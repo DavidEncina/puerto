@@ -9,13 +9,6 @@ public class EmbarcacionAMotor extends Barco
 {
     // Almacena la potencia de la embarcacion a motor
     private int potencia;
-
-    /**
-     * Constructor for objects of class EmbarcacionAMotor
-     */
-    public EmbarcacionAMotor()
-    {
-    }
     
     /**
      * Constructor for objects of class EmbarcacionAMotor
@@ -31,6 +24,15 @@ public class EmbarcacionAMotor extends Barco
      * @return 
      */
     public int getPotencia()
+    {
+        return potencia;
+    }
+    
+    /**
+     * Coeficiente necesario para calcular el alquiler de los amarres
+     */
+    @Override
+    public int getCoeficienteBernua()
     {
         return potencia;
     }

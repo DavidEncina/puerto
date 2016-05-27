@@ -11,13 +11,6 @@ public class Cliente
     private String nombre;
     // Almacena el dni del cliente
     private String dni;
-
-    /**
-     * Constructor for objects of class Cliente
-     */
-    public Cliente()
-    {
-    }
     
     /**
      * Constructor for objects of class Cliente
