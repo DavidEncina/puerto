@@ -5,29 +5,43 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class EmbarcacionAMotor
+public class EmbarcacionAMotor extends Barco
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // Almacena la potencia de la embarcacion a motor
+    private int potencia;
 
     /**
      * Constructor for objects of class EmbarcacionAMotor
      */
     public EmbarcacionAMotor()
     {
-        // initialise instance variables
-        x = 0;
+    }
+    
+    /**
+     * Constructor for objects of class EmbarcacionAMotor
+     */
+    public EmbarcacionAMotor(String matricula, float eslora, int anoFabricacion, int potencia)
+    {
+        super(matricula, eslora, anoFabricacion);
+        this.potencia = potencia;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Devuelve la potencia de la embarcacion a motor
+     * @return 
      */
-    public int sampleMethod(int y)
+    public int getPotencia()
     {
-        // put your code here
-        return x + y;
+        return potencia;
+    }
+    
+    /**
+     * Devuelve las caracteristicas de la embarcacion a motor
+     */
+    @Override
+    public String toString()
+    {
+        super.toString();
+        return "\nPotencia: " + potencia;
     }
 }

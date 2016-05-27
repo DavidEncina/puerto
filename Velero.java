@@ -38,6 +38,7 @@ public class Velero extends Barco
     /**
      * Devuelve las caracteristicas del velero
      */
+    @Override
     public String toString()
     {
         super.toString();

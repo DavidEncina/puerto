@@ -5,29 +5,44 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Yate
+public class Yate extends EmbarcacionAMotor
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // Almacena el numero de camarotes del yate
+    private int numeroCamarotes;
 
     /**
      * Constructor for objects of class Yate
      */
     public Yate()
     {
-        // initialise instance variables
-        x = 0;
+    }
+    
+    /**
+     * Constructor for objects of class Yate
+     */
+    public Yate(String matricula, float eslora, int anoFabricacion, int potencia, int numeroCamarotes)
+    {
+        super(matricula, eslora, anoFabricacion, potencia);
+        this.numeroCamarotes = numeroCamarotes;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Devuelve el numero de camarotes del yate
+     * @return
      */
     public int sampleMethod(int y)
     {
-        // put your code here
-        return x + y;
+        return numeroCamarotes;
+    }
+    
+    /**
+     * Devuelve las caracteristicas de la embarcacion a motor
+     * @return
+     */
+    @Override
+    public String toString()
+    {
+        super.toString();
+        return "\nNumero de camarotes: " + numeroCamarotes;
     }
 }
