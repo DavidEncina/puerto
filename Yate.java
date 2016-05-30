@@ -18,15 +18,6 @@ public class Yate extends EmbarcacionAMotor
         super(matricula, eslora, anoFabricacion, potencia);
         this.camarotes = camarotes;
     }
-
-    /**
-     * Devuelve el numero de camarotes del yate
-     * @return
-     */
-    public int getCamarotes()
-    {
-        return camarotes;
-    }
     
     /**
      * Coeficiente necesario para calcular el alquiler de los amarres
@@ -34,7 +25,7 @@ public class Yate extends EmbarcacionAMotor
     @Override
     public int getCoeficienteBernua()
     {
-        return getPotencia() + numeroCamarotes;
+        return getCoeficienteBernua() + camarotes;
     }
     
     /**

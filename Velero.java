@@ -18,15 +18,6 @@ public class Velero extends Barco
         super(matricula, eslora, anoFabricacion);
         this.numeroMastiles = numeroMastiles;
     }
-
-    /**
-     * Devuelve el numero de mastiles del velero
-     * @return
-     */
-    public int getNumeroMastiles()
-    {
-        return numeroMastiles;
-    }
     
     /**
      * Coeficiente necesario para calcular el alquiler de los amarres

@@ -18,15 +18,6 @@ public class EmbarcacionAMotor extends Barco
         super(matricula, eslora, anoFabricacion);
         this.potencia = potencia;
     }
-
-    /**
-     * Devuelve la potencia de la embarcacion a motor
-     * @return 
-     */
-    public int getPotencia()
-    {
-        return potencia;
-    }
     
     /**
      * Coeficiente necesario para calcular el alquiler de los amarres

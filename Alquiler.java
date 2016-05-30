@@ -7,27 +7,41 @@
  */
 public class Alquiler
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // Almacena el numero de dias que se alquila un amarre
+    private int numeroDias;
+    // Almacena el cliente del amarre
+    private Cliente cliente;
+    // Almacena el barco del amarre
+    private Barco barco;
+    // Almacena el valor del alquiler
+    private static final float VALOR_FIJO_ALQUILER = 300;
+    // Almacena el valor multiplicador
+    private static final float MULTIPLICADOR_ESLORA = 10;    
 
     /**
      * Constructor for objects of class Alquiler
      */
-    public Alquiler()
+    public Alquiler(int numeroDias, Cliente cliente, Barco barco)
     {
-        // initialise instance variables
-        x = 0;
+        this.numeroDias = numeroDias;
+        this.cliente = cliente;
+        this.barco = barco;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Devuelve el coste del alquiler en €
+     * @return
      */
-    public int sampleMethod(int y)
+    public float getCosteAlquiler()
     {
-        // put your code here
-        return x + y;
+        return numeroDias * (MULTIPLICADOR_ESLORA * barco.getEslora()) + (VALOR_FIJO_ALQUILER * barco.getCoeficienteBernua());
+    }
+    
+    /**
+     * Devuelve las caracteristicas del alquiler
+     */
+    public String toString()
+    {
+        return "Cliente: " + cliente + "\nBarco: " + barco + "\nNumero de dias de alquiler: " + numeroDias + "\nCoste alquiler: " + getCosteAlquiler();
     }
 }
