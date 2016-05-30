@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class EmbarcacionAMotor extends Barco
+public class EmbarcacionDeportiva extends Barco
 {
     // Almacena la potencia de la embarcacion a motor
     private int potencia;
@@ -13,7 +13,7 @@ public class EmbarcacionAMotor extends Barco
     /**
      * Constructor for objects of class EmbarcacionAMotor
      */
-    public EmbarcacionAMotor(String matricula, float eslora, int anoFabricacion, int potencia)
+    public EmbarcacionDeportiva(int potencia, String matricula, float eslora, int anoFabricacion)
     {
         super(matricula, eslora, anoFabricacion);
         this.potencia = potencia;
@@ -34,7 +34,8 @@ public class EmbarcacionAMotor extends Barco
     @Override
     public String toString()
     {
-        super.toString();
-        return "\nPotencia: " + potencia;
+        String data = super.toString();
+        data += "\nPotencia: " + potencia;
+        return data;
     }
 }

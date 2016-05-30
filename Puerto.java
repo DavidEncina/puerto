@@ -25,16 +25,15 @@ public class Puerto
      * Devuelve la posicion del barco o -1 si no lo puede añadir
      */
     public int addAlquiler(int numeroDias, Cliente cliente, Barco barco)
-    {
-        Alquiler alquiler = new Alquiler(numeroDias, cliente, barco);
+    {        
         int posicion = -1;
-        boolean addOk = false;
-        for (int i = 0; i < alquileres.length && !addOk; i++) {
+        int i = 0;
+        while (i < alquileres.length && posicion == -1) {
             if (alquileres[i] == null) {
-                alquileres[i] = alquiler;
+                alquileres[i] = new Alquiler(numeroDias, cliente, barco);
                 posicion = i;
-                addOk = true;
             }
+            i++;
         }
         return posicion;
     }
@@ -59,8 +58,13 @@ public class Puerto
      */
     public float liquidarAlquiler(int posicion)
     {
-        float coste = alquileres[posicion].getCosteAlquiler();
-        alquileres[posicion] = null;
+        float coste = -1;
+        if (posicion < NUMERO_AMARRES || posicion >= 0) {
+            if (alquileres[posicion] != null) {
+                coste = alquileres[posicion].getCosteAlquiler();
+                alquileres[posicion] = null;
+            }             
+        }        
         return coste;
     }
 }

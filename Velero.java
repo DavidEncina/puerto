@@ -13,7 +13,7 @@ public class Velero extends Barco
     /**
      * Constructor for objects of class Velero
      */
-    public Velero(String matricula, float eslora, int anoFabricacion, int numeroMastiles)
+    public Velero(int numeroMastiles, String matricula, float eslora, int anoFabricacion)
     {
         super(matricula, eslora, anoFabricacion);
         this.numeroMastiles = numeroMastiles;
@@ -34,7 +34,8 @@ public class Velero extends Barco
     @Override
     public String toString()
     {
-        super.toString();
-        return "\nNumero de mastiles: " + numeroMastiles;
+        String data = super.toString();
+        data += "Número de mástiles: " + numeroMastiles + "\n";
+        return data;
     }
 }

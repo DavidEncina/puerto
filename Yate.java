@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Yate extends EmbarcacionAMotor
+public class Yate extends EmbarcacionDeportiva
 {
     // Almacena el numero de camarotes del yate
     private int camarotes;
@@ -13,9 +13,9 @@ public class Yate extends EmbarcacionAMotor
     /**
      * Constructor for objects of class Yate
      */
-    public Yate(String matricula, float eslora, int anoFabricacion, int potencia, int camarotes)
+    public Yate(int potencia, int camarotes, String matricula, float eslora, int anoFabricacion)
     {
-        super(matricula, eslora, anoFabricacion, potencia);
+        super(potencia, matricula, eslora, anoFabricacion);
         this.camarotes = camarotes;
     }
     
@@ -25,7 +25,7 @@ public class Yate extends EmbarcacionAMotor
     @Override
     public int getCoeficienteBernua()
     {
-        return getCoeficienteBernua() + camarotes;
+        return super.getCoeficienteBernua() + camarotes;
     }
     
     /**
@@ -35,7 +35,8 @@ public class Yate extends EmbarcacionAMotor
     @Override
     public String toString()
     {
-        super.toString();
-        return "\nNumero de camarotes: " + camarotes;
+        String data = super.toString();
+        data += "\nNumero de camarotes: " + camarotes;
+        return data;
     }   
 }
